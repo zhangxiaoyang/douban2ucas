@@ -1,0 +1,62 @@
+body {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  line-height: 40px;
+  padding-bottom: 19px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.searchbar {
+   margin: 3px;
+   margin-left: 10px;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.container .header .row {
+   margin: 10px;
+}
+
+.avatar {
+   width: 40px;
+   height: 40px;
+}
+
+li[role="presentation"] {
+  margin-bottom: 8px;
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+  color: #777777;
+  margin-top: 30px;
+  padding-top: 19px;
+}
+
+
+.item {
+   border-bottom:1px dashed #e5e5e5;
+}
+
+.book .row {
+   margin: 20px;
+}
+
+.details {
+  color: #777777;
+}

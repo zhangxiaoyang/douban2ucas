@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/douban2ucas/!svn/ver/193/1/ui
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/douban2ucas/!svn/ver/139/1/ui/urls.py
+END
+TokenBackend.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/douban2ucas/!svn/ver/22/1/ui/TokenBackend.py
+END
+wsgi.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/douban2ucas/!svn/ver/22/1/ui/wsgi.py
+END
+apis.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/douban2ucas/!svn/ver/193/1/ui/apis.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/douban2ucas/!svn/ver/174/1/ui/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/douban2ucas/!svn/ver/22/1/ui/__init__.py
+END
+test.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/douban2ucas/!svn/ver/22/1/ui/test.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/douban2ucas/!svn/ver/131/1/ui/settings.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/douban2ucas/!svn/ver/22/1/ui/models.py
+END

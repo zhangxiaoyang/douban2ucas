@@ -1,0 +1,72 @@
+<div ng-if="books.length == 0" class="row">
+    <div class="col-lg-12">
+        <div class="jumbotron">
+            <div class="text-center">
+                <img src="/static/img/logo.png">
+            </div>
+            <p>
+            	你在此处木有留下任何痕迹
+            </p>
+        </div>
+    </div>
+</div>
+<div ng-if="books.length > 0">
+    <div class="row text-center">
+        <form class="form col-lg-3">
+            <div class="form-group">
+                <input ng-model="search" type="text" class="form-control" placeholder="搜索">
+            </div>
+        </form>
+    </div>
+    <div class="row" ng-repeat="book in books | filter:search">
+        <div class="book">
+            <div class="row item">
+                <div class="col-lg-2">
+                    <a target="_blank" href="{{book.url}}"><img class="img-thumbnail" src="{{book.image}}"></a>
+                </div>
+                <div class="col-lg-3">
+                    <h4><a href="{{book.url}}">{{book.title}}</a> （{{book.average}}分）</h4>
+                    <p class="details">
+                        作者: {{book.author}}<br/>
+                        出版社: {{book.publisher}}<br/>
+                        出版年: {{book.pubdate}}<br/>
+                        页数: {{book.pages}}<br/>
+                        定价: {{book.price}}<br/>
+                        ISBN: {{book.isbn}}<br/>
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-target="#details-{{book.id}}">内容简介</a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="details-{{book.id}}">
+                            <div class="panel-body">{{book.summary}}</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail" ng-switch on="details[book.isbn]">
+                        <div ng-switch-when="false">
+                            木有找到这本书，使用<a target="_blank" href="http://opac.las.ac.cn/">国科图</a>查查看
+                        </div>
+                        <div ng-switch-when="null">
+                            努力加载中...
+                        </div>
+                        <div ng-switch-default>
+                            <div class="row" ng-repeat="d in details[book.isbn]">
+                                索书号: {{d.shelf}}<br/>
+                                <span ng-repeat="st in d.status track by $index">
+                                    <b ng-if="st==true" class="label label-success">{{d.sublib[$index]}}</b>
+                                    <b ng-if="st==false" class="label label-default">{{d.sublib[$index]}}</b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="text-center">你已看完所有条目，赞</div>
+</div>
